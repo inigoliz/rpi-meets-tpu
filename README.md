@@ -22,6 +22,10 @@ Make sure that `libcamera2` is installed (usually it comes by default)
 
 ## Running inference
 
+```shell
+python install_firmware.py
+```
+
 Two models are available: `classification` and `object-detection`.
 
 To check that everything works, run `python benchmark.py`.
