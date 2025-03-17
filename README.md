@@ -9,7 +9,7 @@ Hardware needed:
 This software builds on top of [inigoliz/coral-in-python](https://github.com/inigoliz/coral-in-python).
 
 > **Note**:
-> The Raspberry Pi model does not matter
+> The Raspberry Pi model does not matter. I have tried on a **Raspberry Pi 5** and on a **Raspberry Pi Zero**.
 
 ## Getting started
 
