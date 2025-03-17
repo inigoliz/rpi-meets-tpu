@@ -18,7 +18,18 @@ pip install pyusb
 pip install Pillow
 ```
 
-Make sure that `libcamera2` is installed (usually, comes by default)
+Make sure that `libcamera2` is installed (usually it comes by default)
+
+## Running inference
+
+Two models are available: `classification` and `object-detection`.
+
+To check that everything works, run `python benchmark.py`.
+
+Running `main-streaming.py` creates an http server where the inference results are visualized live on top of the camera feed:
+
+<img width="1091" alt="Screenshot 2025-03-17 at 02 17 45" src="https://github.com/user-attachments/assets/361809e4-e751-41a0-aa21-cea504a7ec27" />
+
 
 
 
