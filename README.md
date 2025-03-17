@@ -37,5 +37,5 @@ Running `main-streaming.py` creates an http server where the inference results a
 
 ## Aditional details
 
-The difference between the code in [inigoliz/coral-in-python](https://github.com/inigoliz/coral-in-python) and the code used here is that the code used here is adapted for sequential processing of the video frames. This means that the ML model and the execution headers are only sent once to the Coral TPU.
+The difference between the code in [inigoliz/coral-in-python](https://github.com/inigoliz/coral-in-python) and the code in this repo is that the code used here is adapted for the sequential processing of the video frames. This means that the ML model and the execution headers are only sent once to the Coral TPU.
 
