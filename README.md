@@ -13,7 +13,7 @@ This software builds on top of [inigoliz/coral-in-python](https://github.com/ini
 
 ## Getting started
 
-```python
+```shell
 pip install pyusb
 pip install Pillow
 ```
