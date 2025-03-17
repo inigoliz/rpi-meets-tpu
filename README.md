@@ -1,6 +1,6 @@
 # RPi meets TPU
 
-Run ML models on the video feed from a Raspberry Pi camera module using a Coral TPU as a ML accelerator.
+Run ML models on the video feed from a Raspberry Pi camera using a Coral TPU as a ML accelerator.
 
 Hardware needed:
 - Raspberry Pi + Camera Module
