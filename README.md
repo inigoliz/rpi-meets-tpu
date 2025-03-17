@@ -18,7 +18,7 @@ pip install pyusb
 pip install Pillow
 ```
 
-Make sure that `libcamera2` is installed (usually it comes by default)
+Make sure that `libcamera2` is installed (usually it comes by default).
 
 ## Running inference
 
