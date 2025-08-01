@@ -34,6 +34,9 @@ Running `main-streaming.py` creates an http server where the inference results a
 
 <img width="1091" alt="Screenshot 2025-03-17 at 02 17 45" src="https://github.com/user-attachments/assets/361809e4-e751-41a0-aa21-cea504a7ec27" />
 
+It can run up to ~60 FPS on the video feed from my FPV drone:
+![2025-08-01 12 06 44](https://github.com/user-attachments/assets/3e74ede6-4bce-44a6-95e5-a0d6fc8faac3)
+
 
 ## Aditional details
 
