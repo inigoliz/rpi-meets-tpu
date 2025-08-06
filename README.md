@@ -1,45 +1,63 @@
 # RPi meets TPU
 
-Run ML models on the video feed from a Raspberry Pi camera using a Coral TPU as a ML accelerator.
+Run **ML models** at **~55 FPS** on the video feed from a **FPV drone** using a **Coral TPU** as an ML accelerator.
 
-Hardware needed:
+![2025-08-07 01 06 39](https://github.com/user-attachments/assets/073ff35d-e174-4f01-a32e-fb1346e4c607)
+
+
+## Requirements
+
+The hardware needed is:
 - Raspberry Pi + Camera Module
 - Coral TPU USB Accelerator
+
+![IMG_0206 copy](https://github.com/user-attachments/assets/dc6771d8-aa80-4e0b-a340-536caff14217)
+
 
 This software builds on top of [inigoliz/coral-in-python](https://github.com/inigoliz/coral-in-python).
 
 > **Note**:
-> Any Raspberry Pi model is fine (as long as it's not a Pico, which does not have USB). I have tried on a **Raspberry Pi 5** and on a **Raspberry Pi Zero**.
+> Any Raspberry Pi model is fine (as long as it's not a Pico, which does not have a USB interface). I have tried on a **Raspberry Pi 5** and on a **Raspberry Pi Zero**.
 
-## Getting started
+## Running the model
 
-```shell
+Intall dependencies
+```bash
 pip install pyusb
 pip install Pillow
 ```
 
-Make sure that `libcamera2` is installed (usually it comes by default).
+> **Note:** Ensure that your Raspberry Pi has `libcamera2` installed, used to drive the camera (it is usually installed by default).
 
 ## Running inference
 
-```shell
+```bash
 python install_firmware.py
 ```
 
 Two models are available at `classification/` and `object-detection/`.
 
-To check that everything works, run `python benchmark.py`.
+To check that everything works:
+```bash
+python benchmark.py
+```
 
-Running `main-streaming.py` creates an http server where the inference results are visualized live on top of the camera feed:
-
-<img width="1091" alt="Screenshot 2025-03-17 at 02 17 45" src="https://github.com/user-attachments/assets/361809e4-e751-41a0-aa21-cea504a7ec27" />
+To execute the model:
+```bash
+python main-streaming.py
+```
+It creates an HTTP server and broadcasts the camera feed with the detected boundng boxes.
 
 It can run up to ~55 FPS on the video feed from my FPV drone:
 
-<img width="1091" alt="Screenshot 2025-03-17 at 02 17 45" src="https://github.com/user-attachments/assets/3e74ede6-4bce-44a6-95e5-a0d6fc8faac3" />
+![2025-08-07 01 18 36](https://github.com/user-attachments/assets/fe240616-08ae-4c09-a920-5fad63cb7c2a)
 
 
-## Aditional details
+## Additional details
 
 The difference between the code in [inigoliz/coral-in-python](https://github.com/inigoliz/coral-in-python) and the code in this repo is that the code used here is adapted for the sequential processing of the video frames. This means that the ML model and the execution headers are only sent once to the Coral TPU.
 
+## Detailed information
+An in-depth explanation of this project can be read on my [Portfolio > Object detection FPV drone](https://inigoliz.dev/posts/object-detection-fpv-drone/)
+
+Enjoy!
